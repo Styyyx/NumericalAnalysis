@@ -1,0 +1,6 @@
+C:\Users\perry\Desktop\PEMA\Programming\C#\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\bin\Debug\NumAnal_TaylorSeries.exe.config
+C:\Users\perry\Desktop\PEMA\Programming\C#\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\bin\Debug\NumAnal_TaylorSeries.exe
+C:\Users\perry\Desktop\PEMA\Programming\C#\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\bin\Debug\NumAnal_TaylorSeries.pdb
+C:\Users\perry\Desktop\PEMA\Programming\C#\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\obj\Debug\NumAnal_TaylorSeries.csprojAssemblyReference.cache
+C:\Users\perry\Desktop\PEMA\Programming\C#\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\obj\Debug\NumAnal_TaylorSeries.exe
+C:\Users\perry\Desktop\PEMA\Programming\C#\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\obj\Debug\NumAnal_TaylorSeries.pdb
