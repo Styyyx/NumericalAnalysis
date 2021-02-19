@@ -10,7 +10,25 @@ namespace NumAnal_TaylorSeries
     {
         static void Main(string[] args)
         {
-            GetTaylorSeries(2, 5, 5);
+            Console.WriteLine("NUMERICAL ANALYSIS\nTAYLOR'S POLYNOMIAL SERIES\nROUNDING");
+
+            Console.WriteLine("\nChoose a function to solve:");
+            Console.WriteLine("[1] cos(x)\n[2] sin(x)*e^x");
+            int whichFunction = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("\nEnter a real or complex number (a): ");
+            double a = Convert.ToInt32(Console.ReadLine());
+            
+            Console.Write("Enter a real or complex number (x): ");
+            double x = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter the degree of taylor's polynomial (n): ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter number of decimal places (d): ");
+            int d = Convert.ToInt32(Console.ReadLine());
+
+            GetTaylorSeries(whichFunction, a, x, n, d);
             Console.ReadLine();
         }
 
@@ -25,7 +43,7 @@ namespace NumAnal_TaylorSeries
         ///</param>
         ///
         ///<param name="x">
-        ///The value to which the function will be evaluated to.
+        ///The value to which the function will be EValuated to.
         ///</param>
         /// 
         ///<param name="n">
@@ -38,10 +56,13 @@ namespace NumAnal_TaylorSeries
         ///
 
 
-        static public void GetTaylorSeries(int whichFunction, double x, int n= 1, double a = 0)
+        static public void GetTaylorSeries(int whichFunction, double a = 0, double x = 0, int n = 1, int d = 0)
         {
             double TV = 0;
             double EV = 0;
+            double rndEV = 0;
+            double AE = 0;
+            double PE = 0;
             string Pn = "";
             string currFunc;
             double currCoeff = 0;
@@ -88,6 +109,10 @@ namespace NumAnal_TaylorSeries
                         EV += currCoeff * (Math.Pow(x, i));
                     }
                 }
+
+                rndEV = Math.Round(EV, d);
+                AE = GetAbsoluteError(TV, EV, d);
+                PE = GetPercentageError(TV, EV, d);
             }
             else if (whichFunction == 2)
             {
@@ -148,7 +173,7 @@ namespace NumAnal_TaylorSeries
                     // Update current polynomial
                     currPolynomial = newPolynomial;
 
-                    // Evaluate
+                    // EValuate
                     for (int k = 0; k < currPolynomial.Count(); k++)
                     {
                         switch (currPolynomial[k])
@@ -185,9 +210,13 @@ namespace NumAnal_TaylorSeries
                         EV += currCoeff * (Math.Pow(x, i));
                     }
                 }
+
+                rndEV = Math.Round(EV, d);                
+                AE = GetAbsoluteError(TV, EV, d);
+                PE = GetPercentageError(TV, EV, d);
             }
 
-            Console.WriteLine($"True Value: {TV}\nEstimated Value: {EV}\nTaylor Series: {Pn}");
+            Console.WriteLine($"\nTrue Value: {TV}\nApproximated Value: {EV}\n\nApproximated Value (Rounded): {rndEV}\nTaylor Series: {Pn}\n\nAbsolute Error: {AE.ToString("#0.##%")}\nPercentage Error: {PE.ToString("#0.##%")}");
         }
 
         static public int GetFactorial(int x)
@@ -201,6 +230,22 @@ namespace NumAnal_TaylorSeries
                 x--;
             }
             return sum;
+        }
+
+        static public double GetAbsoluteError(double TV, double EV, int d)
+        {
+            double rndTV = 0, rndEV = 0, AE = 0;
+            rndTV = Math.Round(TV, d);
+            rndEV = Math.Round(EV, d);
+            return AE = Math.Abs(TV - EV);
+        }
+
+        static public double GetPercentageError(double TV, double EV, int d)
+        {
+            double rndTV = 0, rndEV = 0, PE = 0;
+            rndTV = Math.Round(TV, d);
+            rndEV = Math.Round(EV, d);
+            return PE = Math.Abs((TV - EV)/ TV);
         }
     }
 }
