@@ -4,3 +4,10 @@ C:\Users\perry\Desktop\PEMA\Programming\C#\NumericalAnalysis\TaylorSeries\NumAna
 C:\Users\perry\Desktop\PEMA\Programming\C#\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\obj\Debug\NumAnal_TaylorSeries.csprojAssemblyReference.cache
 C:\Users\perry\Desktop\PEMA\Programming\C#\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\obj\Debug\NumAnal_TaylorSeries.exe
 C:\Users\perry\Desktop\PEMA\Programming\C#\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\obj\Debug\NumAnal_TaylorSeries.pdb
+D:\Users\reann\Google Drive\CS201\BSCS201 2ND SEM\NUMERICAL ANALYSIS\MP1\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\bin\Debug\NumAnal_TaylorSeries.exe.config
+D:\Users\reann\Google Drive\CS201\BSCS201 2ND SEM\NUMERICAL ANALYSIS\MP1\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\bin\Debug\NumAnal_TaylorSeries.exe
+D:\Users\reann\Google Drive\CS201\BSCS201 2ND SEM\NUMERICAL ANALYSIS\MP1\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\bin\Debug\NumAnal_TaylorSeries.pdb
+D:\Users\reann\Google Drive\CS201\BSCS201 2ND SEM\NUMERICAL ANALYSIS\MP1\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\obj\Debug\NumAnal_TaylorSeries.csprojAssemblyReference.cache
+D:\Users\reann\Google Drive\CS201\BSCS201 2ND SEM\NUMERICAL ANALYSIS\MP1\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\obj\Debug\NumAnal_TaylorSeries.csproj.CoreCompileInputs.cache
+D:\Users\reann\Google Drive\CS201\BSCS201 2ND SEM\NUMERICAL ANALYSIS\MP1\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\obj\Debug\NumAnal_TaylorSeries.exe
+D:\Users\reann\Google Drive\CS201\BSCS201 2ND SEM\NUMERICAL ANALYSIS\MP1\NumericalAnalysis\TaylorSeries\NumAnal_TaylorSeries\obj\Debug\NumAnal_TaylorSeries.pdb
