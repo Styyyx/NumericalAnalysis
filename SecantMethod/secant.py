@@ -1,7 +1,7 @@
 '''
-  Program Limits:
+  Program Notes:
     - Does not handle square roots.
-
+    - Reserved letters {'e', 'p', 'i'} *cannot use as variables*
 '''
 
 from math import e, pi
@@ -14,7 +14,7 @@ def parse(text:str):
   tree = []
   text.replace(' ', '')
   for i in text:
-    if len(tree) == 0:
+    if len(tree) == 0 and i!='-':
       tree.append(i)
     elif i.isdigit():
       if tree[-1].isdigit():
@@ -22,21 +22,30 @@ def parse(text:str):
       else:
         tree.append(i)
     elif i in '+-*/^':
-      tree.append(i)
+      if i == '-' and (len(tree)==0 or tree[-1] in '+-*/^('):
+        tree.append('0')
+        tree.append(i)
+      else:
+        tree.append(i)
     elif i in '()':
-      if i == '(' and tree[-1].isdigit():
+      if i == '(':
+        if tree[-1].isdigit():
           tree.append('*')
-          tree.append(i)
-          groupCount += 1
+        tree.append(i)
+        groupCount += 1
       else:
           if groupCount > 0 and tree[-1] not in '+-*/^':
             tree.append(i)
             groupCount -= 1
+          else:
+            return 'Error: Invalid groupings'
     elif i.isalpha():
       if i == 'e':
-        tree.append(e)
-      elif i == 'pi':
-        tree.append(pi)
+        tree.append('e')
+      elif i == 'p':
+        tree.append('p')
+      elif i == 'i' and tree[-1] == 'p':
+        tree[-1] += 'i'
       elif var == '':
         var = i
         if tree[-1].isdigit():
@@ -103,10 +112,17 @@ def evalPostfix(pf:list, varVal):
       newpf[i] = varVal
   stack = []
   for i in newpf:
-
     if str(i) in '+-*/^':
       rightVal = stack.pop()
       leftVal = stack.pop()
+      if leftVal == 'e':
+        leftVal = e
+      elif leftVal == 'pi':
+        leftVal = pi
+      elif rightVal == 'e':
+        rightVal = e
+      elif rightVal == 'pi':
+        rightVal = pi
       if i == '+':
         stack.append(leftVal + rightVal)
       elif i == '-':
@@ -133,10 +149,17 @@ def secant(x0, x1, func, iter=1, maxIter=None, maxErr=None):
     secant(x1, x2, func, iter+1, maxIter, maxErr)
 
 # Activity 3 A.3
-fn = 'x^6-x-1'
-x0 = 1
-x1 = 1.5
-maxErr = 0.0001
-func = infixToPostfix(parse(fn))
-secant(x0, x1, func, maxErr=maxErr)
+# fn = 'x^6-x-1'
+# x0 = 1
+# x1 = 1.5
+# maxErr = 0.0001
+# func = infixToPostfix(parse(fn))
+# secant(x0, x1, func, maxErr=maxErr)
 
+# Activity 3 B.3
+# fn = 'e^(-x)-x'
+# x0 = -1
+# x1 = 0
+# maxErr = 0.0001
+# func = infixToPostfix(parse(fn))
+# secant(x0, x1, func, maxErr=maxErr)
