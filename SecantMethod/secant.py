@@ -1,19 +1,40 @@
 '''
   Program Notes:
     - Does not handle square roots.
-    - Reserved letters {'e', 'p', 'i'} *cannot use as variables*
+    - Reserved letters {e,p,i,c,o,s,n,t,a} *cannot use as variables*
 '''
 
-from math import e, pi
+from math import e, pi, sin, cos, tan
+import re
 
 var = ''
+keys = ['e','pi','sin','cos','tan']
 
-def parse(text:str):
+def parse(text:str)->list:
   global var
   groupCount=0
   tree = []
   text.replace(' ', '')
-  for i in text:
+  keyStart = []
+  keyEnd = []
+
+  # Search text for all occurrence of each key in keys
+  # Add its indexes' start and end to hashTab
+  for i in keys:
+    for j in re.finditer(i, text):
+      keyStart.append(j.start())
+      keyEnd.append(j.end())
+
+  k = 0
+  while k < len(text):
+    if k in keyStart:
+      if len(tree) != 0 and tree[-1] not in '+-*/^':
+        tree.append('*')
+      l = keyEnd[keyStart.index(k)]
+      tree.append(text[k:l])
+      k=l
+    
+    i = text[k]
     if len(tree) == 0 and i!='-':
       tree.append(i)
     elif i.isdigit():
@@ -39,14 +60,8 @@ def parse(text:str):
             groupCount -= 1
           else:
             return 'Error: Invalid groupings'
-    elif i.isalpha():
-      if i == 'e':
-        tree.append('e')
-      elif i == 'p':
-        tree.append('p')
-      elif i == 'i' and tree[-1] == 'p':
-        tree[-1] += 'i'
-      elif var == '':
+    elif i.isalpha() and not (k in keyStart):
+      if var == '':
         var = i
         if tree[-1].isdigit():
           tree.append('*')
@@ -57,6 +72,7 @@ def parse(text:str):
         tree.append(i)
       else:
         print('Error: Cannot process more than one variable')
+    k+=1
   return tree
 
 def infixToPostfix(lst:list)->list:
@@ -101,6 +117,7 @@ def infixToPostfix(lst:list)->list:
 
   while len(stack) != 0:
     output.append(stack.pop())
+
   return output
 
 def evalPostfix(pf:list, varVal):
@@ -111,7 +128,10 @@ def evalPostfix(pf:list, varVal):
     elif newpf[i] == var:
       newpf[i] = varVal
   stack = []
-  for i in newpf:
+  k = 0
+  while k < len(newpf):
+    i = newpf[k]
+    # Binary Operations
     if str(i) in '+-*/^':
       rightVal = stack.pop()
       leftVal = stack.pop()
@@ -133,8 +153,20 @@ def evalPostfix(pf:list, varVal):
         stack.append(leftVal / rightVal)
       elif i == '^':
         stack.append(leftVal ** rightVal)
+    elif i in ['sin','cos','tan']:
+      val = newpf[k+1]
+      if i == 'sin':
+        stack.append(sin(val))
+        k += 1
+      elif i == 'cos':
+        stack.append(cos(val))
+        k += 1
+      elif i == 'tan':
+        stack.append(tan(val))
+        k += 1
     else:
       stack.append(i)
+    k+=1
   return stack[0]
 
 def secant(x0, x1, func, iter=1, maxIter=None, maxErr=None):
@@ -144,17 +176,23 @@ def secant(x0, x1, func, iter=1, maxIter=None, maxErr=None):
   fnx1 = evalPostfix(func, x1)
   x2 = x1 - fnx1 * ((x1-x0)/(fnx1-fnx0))
   err = abs(x2-x1)
-  print([iter, x0, x1, fnx0, fnx1, x2, err])
-  if (iter != maxIter and maxIter != None) or (err > maxErr and maxErr != None):
-    secant(x1, x2, func, iter+1, maxIter, maxErr)
+  yield([iter, x0, x1, fnx0, fnx1, x2, err])
+  if maxIter != None and iter == maxIter:
+    return
+  elif maxErr != None and err <= maxErr:
+    return
+  else:
+    yield from secant(x1, x2, func, iter+1, maxIter, maxErr)
 
 # Activity 3 A.3
-# fn = 'x^6-x-1'
-# x0 = 1
-# x1 = 1.5
-# maxErr = 0.0001
-# func = infixToPostfix(parse(fn))
-# secant(x0, x1, func, maxErr=maxErr)
+fn = 'x^6-x-1'
+x0 = 1
+x1 = 1.5
+maxErr = 0.0001
+func = infixToPostfix(parse(fn))
+table = [i for i in secant(x0, x1, func, maxErr=maxErr)]
+print(table[-1][-2])
+
 
 # Activity 3 B.3
 # fn = 'e^(-x)-x'
@@ -162,4 +200,12 @@ def secant(x0, x1, func, iter=1, maxIter=None, maxErr=None):
 # x1 = 0
 # maxErr = 0.0001
 # func = infixToPostfix(parse(fn))
-# secant(x0, x1, func, maxErr=maxErr)
+
+# Test 3
+# fn = 'e^(xcos(5))'
+# x0 = -1
+# x1 = 1
+# maxIter = 10
+# parsed = parse(fn)
+# postfix = infixToPostfix(parsed)
+# secant(x0, x1, postfix, maxIter=maxIter)
