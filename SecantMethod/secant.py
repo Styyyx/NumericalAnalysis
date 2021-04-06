@@ -6,6 +6,7 @@
 
 from math import e, pi, sin, cos, tan
 import re
+from tabulate import tabulate
 
 var = ''
 keys = ['e','pi','sin','cos','tan']
@@ -191,8 +192,7 @@ x1 = 1.5
 maxErr = 0.0001
 func = infixToPostfix(parse(fn))
 table = [i for i in secant(x0, x1, func, maxErr=maxErr)]
-print(table[-1][-2])
-
+print(tabulate(table, headers=["n","x0","x1","f(x0)","f(x1)","Cn","error"], tablefmt="github"))
 
 # Activity 3 B.3
 # fn = 'e^(-x)-x'
