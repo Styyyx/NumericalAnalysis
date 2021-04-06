@@ -185,14 +185,42 @@ def secant(x0, x1, func, iter=1, maxIter=None, maxErr=None):
   else:
     yield from secant(x1, x2, func, iter+1, maxIter, maxErr)
 
+print("Root Finding Method \nSecant Method \n")
+print("Note: this program doesn't handle square roots and characters 'e,p,i,c,o,s,n,t,a' \ncannot be used as variables because they are reserved letters used in the program. \n")
+print("legends: \n  n = number of iterations \n  x0 = first initial point \n  x1 = second initial point \n  Cn = approximate root \n  Error = Margin of Error \n")  
+
+try:
+  fn = input("Enter a function: ")
+  x0 = float(input("Enter the first initial point: "))
+  x1 = float(input("Enter second initial point: "))
+  maxErr = float(input("Enter the margin of error: "))
+  
+  func = infixToPostfix(parse(fn))
+  table = [i for i in secant(x0, x1, func, maxErr=maxErr)]
+  print(tabulate(table, headers=["n","x0","x1","f(x0)","f(x1)","Cn","Error"], tablefmt="github"))
+except IndexError:
+  print("Please enter a function")
+except NameError:
+  print("Please enter a valid input.")
+except ValueError:
+  print("Please enter a value.")
+except TypeError:
+  print("Please enter a valid function.")
+except:
+  if (maxErr < 0):
+    print("Please enter a valid margin of error")
+finally:
+  print("The program will now terminate.")
+  exit()
+
 # Activity 3 A.3
-fn = 'x^6-x-1'
-x0 = 1
-x1 = 1.5
-maxErr = 0.0001
-func = infixToPostfix(parse(fn))
-table = [i for i in secant(x0, x1, func, maxErr=maxErr)]
-print(tabulate(table, headers=["n","x0","x1","f(x0)","f(x1)","Cn","error"], tablefmt="github"))
+# fn = 'x^6-x-1'
+# x0 = 1
+# x1 = 1.5
+# maxErr = 0.0001
+# func = infixToPostfix(parse(fn))
+# table = [i for i in secant(x0, x1, func, maxErr=maxErr)]
+# print(tabulate(table, headers=["n","x0","x1","f(x0)","f(x1)","Cn","Error"], tablefmt="github"))
 
 # Activity 3 B.3
 # fn = 'e^(-x)-x'
