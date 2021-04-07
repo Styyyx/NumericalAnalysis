@@ -209,9 +209,6 @@ except TypeError:
 except:
   if (maxErr < 0):
     print("Please enter a valid margin of error")
-finally:
-  print("The program will now terminate.")
-  exit()
 
 # Activity 3 A.3
 # fn = 'x^6-x-1'
