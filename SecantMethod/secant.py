@@ -172,54 +172,101 @@ def evalPostfix(pf:list, varVal):
 
 def secant(x0, x1, func, iter=1, maxIter=None, maxErr=None):
   if maxIter==None == maxErr==None:
-    return 'Error: Stopping requirements invalid'
+    print('Error: Stopping requirements invalid')
+    return
   fnx0 = evalPostfix(func, x0)
   fnx1 = evalPostfix(func, x1)
+  if fnx0-fnx1 == 0:
+    print('Error: fnx0 is equal to fnx1 resulting in division by zero')
+    return
   x2 = x1 - fnx1 * ((x1-x0)/(fnx1-fnx0))
   err = abs(x2-x1)
   yield([iter, x0, x1, fnx0, fnx1, x2, err])
-  if maxIter != None and iter == maxIter:
-    return
+  if maxIter != None:
+    if iter == maxIter:
+      return
+    elif err <= 0:
+      print('Program reached 0 error before reaching desired number of iterations')
+      return
+    else:
+      yield from secant(x1, x2, func, iter+1, maxIter, maxErr)
   elif maxErr != None and err <= maxErr:
     return
   else:
     yield from secant(x1, x2, func, iter+1, maxIter, maxErr)
 
-print("Root Finding Method \nSecant Method \n")
-print("Note: this program doesn't handle square roots and characters 'e,p,i,c,o,s,n,t,a' \ncannot be used as variables because they are reserved letters used in the program. \n")
-print("legends: \n  n = number of iterations \n  x0 = first initial point \n  x1 = second initial point \n  Cn = approximate root \n  Error = Margin of Error \n")  
+def TryAgain():
+  while True:
+    x = input('Try Again? [Y] or [N]: ').lower()
+    if x == 'y':
+      return True
+    elif x == 'n':
+      return False
+    else:
+      continue
 
-try:
-  response = ''
+print('''Root Finding Method: Secant Method
+Note:
+\tThis program does not handle square roots
+\tCharacters 'e,p,i,c,o,s,n,t,a' cannot be used as variables because they are reserved letters used in the program.
+Legends:
+\tn = number of iterations
+\tx0 = first initial point
+\tx1 = second initial point
+\tCn = approximate root
+\tError = Margin of Error
+''')
 
-  fn = input("Enter a function: ")
-  x0 = float(input("Enter the first initial point: "))
-  x1 = float(input("Enter second initial point: "))
-  response = int(input("Choose an option for the stopping force: \n[1] Maximum Error \n[2] Maximum Iterations\n"))
+while True:
+  try:
+    response = ''
   
-  if response == 1:
-    maxErr = float(input("Enter the margin of error: "))
-    func = infixToPostfix(parse(fn))
-    table = [i for i in secant(x0, x1, func, maxErr=maxErr)]
-    print(tabulate(table, headers=["n","x0","x1","f(x0)","f(x1)","Cn","Error"], tablefmt="github"))
-  elif response == 2:
-    maxIter = float(input("Enter maximum iterations: "))
-    func = infixToPostfix(parse(fn))
-    table = [i for i in secant(x0, x1, func, maxIter=maxIter)]
-    print(tabulate(table, headers=["n","x0","x1","f(x0)","f(x1)","Cn","Error"], tablefmt="github"))
-  else:
-    print("Please enter [1] or [2].")
-  
-except IndexError:
-  print("Please enter a function")
-except NameError:
-  print("Please enter a valid input.")
-except ValueError:
-  print("Please enter a value.")
-except TypeError:
-  print("Please enter a valid function.")
-except ZeroDivisionError:
-  print("Please enter a valid input")
+    fn = input("Enter a function: ")
+    x0 = float(input("Enter the first initial point: "))
+    x1 = float(input("Enter second initial point: "))
+
+    while True:
+      response = int(input("Choose an option for the stopping force: \n[1] Maximum Error \n[2] Maximum Iterations\n"))
+      if response == 1:
+        maxErr = float(input("Enter the margin of error: "))
+        func = infixToPostfix(parse(fn))
+        print('\n')
+        table = [i for i in secant(x0, x1, func, maxErr=maxErr)]
+        print(tabulate(table, headers=["n","x0","x1","f(x0)","f(x1)","Cn","Error"], tablefmt="github"))
+        break
+      elif response == 2:
+        maxIter = int(input("Enter maximum iterations: "))
+        func = infixToPostfix(parse(fn))
+        print('\n')
+        table = [i for i in secant(x0, x1, func, maxIter=maxIter)]
+        print(tabulate(table, headers=["n","x0","x1","f(x0)","f(x1)","Cn","Error"], tablefmt="github"))
+        break
+      else:
+        print("Please enter [1] or [2].")
+    
+    if not TryAgain():
+      break
+
+  # except:
+  #   input('Error Occurred. Enter anything to exit: ')
+  #   break
+    
+  except IndexError:
+    # print('IndexError')
+    print("Please enter a function")
+  except NameError:
+    # print('NameError')
+    print("Please enter a valid input.")
+  except ValueError:
+    # print('ValueError')
+    print("Please enter a value.")
+  except TypeError:
+    # print('TypeError')
+    print("Please enter a valid function.")
+  except ZeroDivisionError:
+    # print('ZeroDivisionError')
+    # print('Program tried to divide by zero. Perhaps lessen the number of iterations')
+    print("Please enter a valid input")
 
 # Activity 3 A.3
 # fn = 'x^6-x-1'
