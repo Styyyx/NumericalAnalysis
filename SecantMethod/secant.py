@@ -190,14 +190,26 @@ print("Note: this program doesn't handle square roots and characters 'e,p,i,c,o,
 print("legends: \n  n = number of iterations \n  x0 = first initial point \n  x1 = second initial point \n  Cn = approximate root \n  Error = Margin of Error \n")  
 
 try:
+  response = ''
+
   fn = input("Enter a function: ")
   x0 = float(input("Enter the first initial point: "))
   x1 = float(input("Enter second initial point: "))
-  maxErr = float(input("Enter the margin of error: "))
+  response = int(input("Choose an option for the stopping force: \n[1] Maximum Error \n[2] Maximum Iterations\n"))
   
-  func = infixToPostfix(parse(fn))
-  table = [i for i in secant(x0, x1, func, maxErr=maxErr)]
-  print(tabulate(table, headers=["n","x0","x1","f(x0)","f(x1)","Cn","Error"], tablefmt="github"))
+  if response == 1:
+    maxErr = float(input("Enter the margin of error: "))
+    func = infixToPostfix(parse(fn))
+    table = [i for i in secant(x0, x1, func, maxErr=maxErr)]
+    print(tabulate(table, headers=["n","x0","x1","f(x0)","f(x1)","Cn","Error"], tablefmt="github"))
+  elif response == 2:
+    maxIter = float(input("Enter maximum iterations: "))
+    func = infixToPostfix(parse(fn))
+    table = [i for i in secant(x0, x1, func, maxIter=maxIter)]
+    print(tabulate(table, headers=["n","x0","x1","f(x0)","f(x1)","Cn","Error"], tablefmt="github"))
+  else:
+    print("Please enter [1] or [2].")
+  
 except IndexError:
   print("Please enter a function")
 except NameError:
@@ -206,9 +218,8 @@ except ValueError:
   print("Please enter a value.")
 except TypeError:
   print("Please enter a valid function.")
-except:
-  if (maxErr < 0):
-    print("Please enter a valid margin of error")
+except ZeroDivisionError:
+  print("Please enter a valid input")
 
 # Activity 3 A.3
 # fn = 'x^6-x-1'
