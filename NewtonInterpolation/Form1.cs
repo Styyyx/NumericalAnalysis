@@ -33,11 +33,13 @@ public Form1()
                 int pointBX = 240;
                 int pointBY = 5;
 
+                int locX = 180;
+                int locY = 0;
                 panel2.Controls.Clear();
+
                 for (int i = 0; i < txtno; i++)
                 {
                     TextBox x = new TextBox();
-                    // Text = (i + 1).ToString();
                     x.Location = new Point(pointAX, pointAY);
                     x.Font = new Font("Malgun Gothic", 12);
                     x.TextAlign = HorizontalAlignment.Center;
@@ -46,14 +48,24 @@ public Form1()
                     pointAY += 35;
 
                     TextBox y = new TextBox();
-                    // Text = (i + 1).ToString();
                     y.Location = new Point(pointBX, pointBY);
                     y.Font = new Font("Malgun Gothic", 12);
                     y.TextAlign = HorizontalAlignment.Center;
                     panel2.Controls.Add(y);
                     panel2.Show();
                     pointBY += 35;
+                    locY = pointBY;
                 }
+
+                Button btn_Solve = new Button();
+                btn_Solve.Name = "btn_Solve";
+                btn_Solve.Text = "SOLVE";
+                btn_Solve.Height = 30;
+                btn_Solve.Width = 100;
+                btn_Solve.Location = new Point(locX, locY);
+                btn_Solve.Font = new Font("Malgun Gothic", 12, FontStyle.Bold);
+                panel2.Controls.Add(btn_Solve);
+
             }
             catch (Exception)
             {
