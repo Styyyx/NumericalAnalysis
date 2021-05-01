@@ -27,10 +27,10 @@ public Form1()
             try
             {
                 int txtno = int.Parse(txtPoints.Text);
-                int pointAX = 110;
+                int pointAX = 109;
                 int pointAY = 5;
 
-                int pointBX = 240;
+                int pointBX = 239;
                 int pointBY = 5;
 
                 int locX = 180;
