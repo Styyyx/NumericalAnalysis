@@ -80,7 +80,7 @@ namespace NewtonInterpolation
         /// <param name="xPts">Initial array of x points</param>
         /// <param name="yPts">Previous array of y points</param>
         /// <returns></returns>
-        private float[] GetNextLayer(int nLayer, float[] xPts, float[] yPts)
+        static private float[] GetNextLayer(int nLayer, float[] xPts, float[] yPts)
         {
             int size = yPts.Length;
             float[] nextLayer = new float[size-1];
