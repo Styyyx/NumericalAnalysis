@@ -25,7 +25,7 @@ namespace NewtonInterpolation
         ///<param name="xPts">Array of x points</param>
         ///<param name="yPts">Array of y points</param>
         ///<param name="size">Number of points. More than 2</param>
-        float NewtonInterpolate(float[] xPts, float[] yPts, float xCoord)
+        static float NewtonInterpolate(float[] xPts, float[] yPts, float xCoord)
         {
             int size;
             float yCoord;

@@ -8,3 +8,12 @@ D:\Users\reann\Google Drive\CS201\BSCS201 2ND SEM\NUMERICAL ANALYSIS\MP2\Numeric
 D:\Users\reann\Google Drive\CS201\BSCS201 2ND SEM\NUMERICAL ANALYSIS\MP2\NumericalAnalysis\NewtonInterpolation\obj\Debug\NewtonInterpolation.csproj.CoreCompileInputs.cache
 D:\Users\reann\Google Drive\CS201\BSCS201 2ND SEM\NUMERICAL ANALYSIS\MP2\NumericalAnalysis\NewtonInterpolation\obj\Debug\NewtonInterpolation.exe
 D:\Users\reann\Google Drive\CS201\BSCS201 2ND SEM\NUMERICAL ANALYSIS\MP2\NumericalAnalysis\NewtonInterpolation\obj\Debug\NewtonInterpolation.pdb
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NewtonInterpolation\bin\Debug\NewtonInterpolation.exe.config
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NewtonInterpolation\bin\Debug\NewtonInterpolation.exe
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NewtonInterpolation\bin\Debug\NewtonInterpolation.pdb
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NewtonInterpolation\obj\Debug\NewtonInterpolation.csprojAssemblyReference.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NewtonInterpolation\obj\Debug\NewtonInterpolation.Form1.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NewtonInterpolation\obj\Debug\NewtonInterpolation.Properties.Resources.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NewtonInterpolation\obj\Debug\NewtonInterpolation.csproj.GenerateResource.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NewtonInterpolation\obj\Debug\NewtonInterpolation.exe
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NewtonInterpolation\obj\Debug\NewtonInterpolation.pdb
