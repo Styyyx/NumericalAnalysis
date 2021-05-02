@@ -36,15 +36,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txt_SampleX = new System.Windows.Forms.TextBox();
-            this.txt_SampleY = new System.Windows.Forms.TextBox();
             this.btn_Clear = new System.Windows.Forms.Button();
-            this.txt_InterpolX = new System.Windows.Forms.TextBox();
-            this.txt_InterpolY = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_SampleY = new System.Windows.Forms.TextBox();
+            this.txt_SampleX = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +69,7 @@
             // txtPoints
             // 
             this.txtPoints.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPoints.Location = new System.Drawing.Point(179, 37);
+            this.txtPoints.Location = new System.Drawing.Point(175, 37);
             this.txtPoints.Name = "txtPoints";
             this.txtPoints.Size = new System.Drawing.Size(100, 29);
             this.txtPoints.TabIndex = 0;
@@ -84,7 +79,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(215, 330);
+            this.label3.Location = new System.Drawing.Point(215, 246);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(147, 21);
             this.label3.TabIndex = 0;
@@ -106,7 +101,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(205, 351);
+            this.label4.Location = new System.Drawing.Point(205, 267);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 21);
             this.label4.TabIndex = 0;
@@ -117,7 +112,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(332, 351);
+            this.label5.Location = new System.Drawing.Point(332, 267);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(18, 21);
             this.label5.TabIndex = 0;
@@ -126,49 +121,14 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.btn_Clear);
             this.panel1.Controls.Add(this.btn_Enter);
             this.panel1.Controls.Add(this.txtPoints);
-            this.panel1.Controls.Add(this.txt_InterpolY);
-            this.panel1.Controls.Add(this.txt_InterpolX);
             this.panel1.Location = new System.Drawing.Point(56, 124);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(464, 203);
+            this.panel1.Size = new System.Drawing.Size(464, 119);
             this.panel1.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.AutoSize = true;
-            this.panel2.Controls.Add(this.txt_SampleY);
-            this.panel2.Controls.Add(this.txt_SampleX);
-            this.panel2.Location = new System.Drawing.Point(56, 375);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(464, 41);
-            this.panel2.TabIndex = 4;
-            // 
-            // txt_SampleX
-            // 
-            this.txt_SampleX.Enabled = false;
-            this.txt_SampleX.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SampleX.Location = new System.Drawing.Point(109, 5);
-            this.txt_SampleX.Name = "txt_SampleX";
-            this.txt_SampleX.Size = new System.Drawing.Size(100, 29);
-            this.txt_SampleX.TabIndex = 0;
-            this.txt_SampleX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt_SampleY
-            // 
-            this.txt_SampleY.Enabled = false;
-            this.txt_SampleY.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SampleY.Location = new System.Drawing.Point(239, 5);
-            this.txt_SampleY.Name = "txt_SampleY";
-            this.txt_SampleY.Size = new System.Drawing.Size(100, 29);
-            this.txt_SampleY.TabIndex = 1;
-            this.txt_SampleY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_Clear
             // 
@@ -181,56 +141,35 @@
             this.btn_Clear.UseVisualStyleBackColor = true;
             this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
-            // txt_InterpolX
+            // panel2
             // 
-            this.txt_InterpolX.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_InterpolX.Location = new System.Drawing.Point(109, 161);
-            this.txt_InterpolX.Name = "txt_InterpolX";
-            this.txt_InterpolX.Size = new System.Drawing.Size(100, 29);
-            this.txt_InterpolX.TabIndex = 3;
-            this.txt_InterpolX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.panel2.AutoSize = true;
+            this.panel2.Controls.Add(this.txt_SampleY);
+            this.panel2.Controls.Add(this.txt_SampleX);
+            this.panel2.Location = new System.Drawing.Point(56, 291);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(464, 41);
+            this.panel2.TabIndex = 4;
             // 
-            // txt_InterpolY
+            // txt_SampleY
             // 
-            this.txt_InterpolY.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_InterpolY.Location = new System.Drawing.Point(239, 161);
-            this.txt_InterpolY.Name = "txt_InterpolY";
-            this.txt_InterpolY.Size = new System.Drawing.Size(100, 29);
-            this.txt_InterpolY.TabIndex = 4;
-            this.txt_InterpolY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_SampleY.Enabled = false;
+            this.txt_SampleY.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SampleY.Location = new System.Drawing.Point(239, 5);
+            this.txt_SampleY.Name = "txt_SampleY";
+            this.txt_SampleY.Size = new System.Drawing.Size(100, 29);
+            this.txt_SampleY.TabIndex = 1;
+            this.txt_SampleY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label6
+            // txt_SampleX
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(149, 116);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 21);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Interpolating Points:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(276, 137);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(18, 21);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "y";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(149, 137);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(17, 21);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "x";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.txt_SampleX.Enabled = false;
+            this.txt_SampleX.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SampleX.Location = new System.Drawing.Point(109, 5);
+            this.txt_SampleX.Name = "txt_SampleX";
+            this.txt_SampleX.Size = new System.Drawing.Size(100, 29);
+            this.txt_SampleX.TabIndex = 0;
+            this.txt_SampleX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
@@ -273,11 +212,6 @@
         private System.Windows.Forms.TextBox txt_SampleY;
         private System.Windows.Forms.TextBox txt_SampleX;
         private System.Windows.Forms.Button btn_Clear;
-        private System.Windows.Forms.TextBox txt_InterpolX;
-        private System.Windows.Forms.TextBox txt_InterpolY;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
     }
 }
 

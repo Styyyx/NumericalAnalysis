@@ -66,6 +66,39 @@ public Form1()
                 btn_Solve.Font = new Font("Malgun Gothic", 12, FontStyle.Bold);
                 panel2.Controls.Add(btn_Solve);
 
+                Label lbl_InterpolPts = new Label();
+                lbl_InterpolPts.Text = "Interpolating Points:";
+                lbl_InterpolPts.Location = new Point(150, locY + 40);
+                lbl_InterpolPts.AutoSize = true;
+                lbl_InterpolPts.Font = new Font("Malgun Gothic", 12);
+                panel2.Controls.Add(lbl_InterpolPts);
+
+                Label lbl_InterpolPtsX = new Label();
+                lbl_InterpolPtsX.Text = "x";
+                lbl_InterpolPtsX.Location = new Point(150, locY + 60);
+                lbl_InterpolPtsX.AutoSize = true;
+                lbl_InterpolPtsX.Font = new Font("Malgun Gothic", 12);
+                panel2.Controls.Add(lbl_InterpolPtsX);
+
+                Label lbl_InterpolPtsY = new Label();
+                lbl_InterpolPtsY.Text = "y";
+                lbl_InterpolPtsY.Location = new Point(280, locY + 60);
+                lbl_InterpolPtsY.AutoSize = true;
+                lbl_InterpolPtsY.Font = new Font("Malgun Gothic", 12);
+                panel2.Controls.Add(lbl_InterpolPtsY);
+
+                TextBox txt_xCoor = new TextBox();
+                txt_xCoor.Location = new Point(pointAX, pointAY + 90);
+                txt_xCoor.Font = new Font("Malgun Gothic", 12);
+                txt_xCoor.TextAlign = HorizontalAlignment.Center;
+                panel2.Controls.Add(txt_xCoor);
+
+                TextBox txt_yCoor = new TextBox();
+                txt_yCoor.Location = new Point(pointBX, pointBY + 90);
+                txt_yCoor.Font = new Font("Malgun Gothic", 12);
+                txt_yCoor.TextAlign = HorizontalAlignment.Center;
+                txt_yCoor.ReadOnly = true;
+                panel2.Controls.Add(txt_yCoor);
             }
             catch (Exception)
             {
