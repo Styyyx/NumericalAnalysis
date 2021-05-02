@@ -88,13 +88,14 @@
             // 
             // btn_Enter
             // 
+            this.btn_Enter.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_Enter.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Enter.Location = new System.Drawing.Point(109, 72);
             this.btn_Enter.Name = "btn_Enter";
             this.btn_Enter.Size = new System.Drawing.Size(100, 30);
             this.btn_Enter.TabIndex = 1;
             this.btn_Enter.Text = "ENTER";
-            this.btn_Enter.UseVisualStyleBackColor = true;
+            this.btn_Enter.UseVisualStyleBackColor = false;
             this.btn_Enter.Click += new System.EventHandler(this.btn_Enter_Click);
             // 
             // label4
@@ -132,13 +133,14 @@
             // 
             // btn_Clear
             // 
+            this.btn_Clear.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_Clear.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Clear.Location = new System.Drawing.Point(239, 72);
             this.btn_Clear.Name = "btn_Clear";
             this.btn_Clear.Size = new System.Drawing.Size(100, 30);
             this.btn_Clear.TabIndex = 2;
             this.btn_Clear.Text = "CLEAR";
-            this.btn_Clear.UseVisualStyleBackColor = true;
+            this.btn_Clear.UseVisualStyleBackColor = false;
             this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
             // panel2
@@ -176,6 +178,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(584, 561);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);

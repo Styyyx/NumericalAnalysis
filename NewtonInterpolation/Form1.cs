@@ -64,6 +64,7 @@ public Form1()
                 btn_Solve.Width = 100;
                 btn_Solve.Location = new Point(locX, locY);
                 btn_Solve.Font = new Font("Malgun Gothic", 12, FontStyle.Bold);
+                btn_Solve.BackColor = Color.LightGreen;
                 panel2.Controls.Add(btn_Solve);
 
                 Label lbl_InterpolPts = new Label();
@@ -88,6 +89,7 @@ public Form1()
                 panel2.Controls.Add(lbl_InterpolPtsY);
 
                 TextBox txt_xCoor = new TextBox();
+                txt_xCoor.Name = "txt_xCoor";
                 txt_xCoor.Location = new Point(pointAX, pointAY + 90);
                 txt_xCoor.Font = new Font("Malgun Gothic", 12);
                 txt_xCoor.TextAlign = HorizontalAlignment.Center;
@@ -96,13 +98,16 @@ public Form1()
                 TextBox txt_yCoor = new TextBox();
                 txt_yCoor.Location = new Point(pointBX, pointBY + 90);
                 txt_yCoor.Font = new Font("Malgun Gothic", 12);
+                txt_yCoor.BackColor = Color.LightGreen;
                 txt_yCoor.TextAlign = HorizontalAlignment.Center;
                 txt_yCoor.ReadOnly = true;
+                txt_yCoor.Enabled = false;
                 panel2.Controls.Add(txt_yCoor);
             }
             catch (Exception)
             {
                 MessageBox.Show("Enter a valid number");
+                txtPoints.Clear();
             }
         }
 
