@@ -170,10 +170,12 @@ namespace NewtonInterpolation
             }
             catch
             {
-
+                MessageBox.Show("Please fill all fields.");
             }
 
             panel2.Controls.Clear();
+            panel2.Controls.Add(txt_SampleX);
+            panel2.Controls.Add(txt_SampleY);
 
         }
 
