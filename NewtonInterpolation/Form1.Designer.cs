@@ -40,10 +40,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_SampleY = new System.Windows.Forms.TextBox();
             this.txt_SampleX = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -148,17 +146,18 @@
             // panel2
             // 
             this.panel2.AutoSize = true;
+            this.panel2.Controls.Add(this.txt_SampleY);
             this.panel2.Controls.Add(this.txt_SampleX);
             this.panel2.Location = new System.Drawing.Point(56, 291);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(222, 41);
+            this.panel2.Size = new System.Drawing.Size(464, 41);
             this.panel2.TabIndex = 4;
             // 
             // txt_SampleY
             // 
             this.txt_SampleY.Enabled = false;
             this.txt_SampleY.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SampleY.Location = new System.Drawing.Point(3, 5);
+            this.txt_SampleY.Location = new System.Drawing.Point(239, 5);
             this.txt_SampleY.Name = "txt_SampleY";
             this.txt_SampleY.Size = new System.Drawing.Size(100, 29);
             this.txt_SampleY.TabIndex = 1;
@@ -168,19 +167,11 @@
             // 
             this.txt_SampleX.Enabled = false;
             this.txt_SampleX.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SampleX.Location = new System.Drawing.Point(119, 5);
+            this.txt_SampleX.Location = new System.Drawing.Point(109, 5);
             this.txt_SampleX.Name = "txt_SampleX";
             this.txt_SampleX.Size = new System.Drawing.Size(100, 29);
             this.txt_SampleX.TabIndex = 0;
             this.txt_SampleX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.txt_SampleY);
-            this.panel3.Location = new System.Drawing.Point(284, 291);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(222, 41);
-            this.panel3.TabIndex = 5;
             // 
             // Form1
             // 
@@ -189,7 +180,6 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(584, 561);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
@@ -206,8 +196,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,7 +215,6 @@
         private System.Windows.Forms.TextBox txt_SampleY;
         private System.Windows.Forms.TextBox txt_SampleX;
         private System.Windows.Forms.Button btn_Clear;
-        private System.Windows.Forms.Panel panel3;
     }
 }
 
