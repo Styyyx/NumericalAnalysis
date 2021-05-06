@@ -17,6 +17,9 @@ namespace NewtonInterpolation
         private List<TextBox> tboxX = new List<TextBox> { };
         private List<TextBox> tboxY = new List<TextBox> { };
 
+        float[] xPts;
+        float[] yPts;
+
         private int globalN, globalLocY;
         private TextBox tbox_xcoord;
 
@@ -106,6 +109,17 @@ namespace NewtonInterpolation
                 btn_Solve.BackColor = Color.LightGreen;
                 btn_Solve.Click += new System.EventHandler(this.btn_Solve_Click);
                 panel2.Controls.Add(btn_Solve);
+                
+                Button btn_Clear = new Button();
+                btn_Clear.Name = "btn_Clear";
+                btn_Clear.Text = "CLEAR";
+                btn_Clear.Height = 30;
+                btn_Clear.Width = 100;
+                btn_Clear.Location = new Point(175, locY + 140);
+                btn_Clear.Font = new Font("Malgun Gothic", 12, FontStyle.Bold);
+                btn_Clear.BackColor = Color.LightGreen;
+                btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
+                panel2.Controls.Add(btn_Clear);
 
                 globalLocY = locY;
                 globalN = points;
@@ -120,7 +134,10 @@ namespace NewtonInterpolation
 
         private void btn_Clear_Click(object sender, EventArgs e)
         {
-            // Function for clearing the value of all textboxes
+            tbox_xcoord.Text = "";
+            globalN = 0;
+            globalLocY = 0;
+
             Action<Control.ControlCollection> func = null;
 
             func = (controls) =>
@@ -133,6 +150,18 @@ namespace NewtonInterpolation
             };
 
             func(Controls);
+
+            tboxX.Clear();
+            tboxY.Clear();
+
+            if (xPts != null || xPts.Length == 0)
+            {
+                Array.Clear(xPts, 0, xPts.Length);
+            }
+            else if (yPts != null || yPts.Length == 0)
+            {
+                Array.Clear(yPts, 0, yPts.Length);
+            }
         }
 
         private void btn_Solve_Click(object sender, EventArgs e)
@@ -140,8 +169,8 @@ namespace NewtonInterpolation
             try
             {
                 float xCoord = float.Parse(tbox_xcoord.Text);
-                float[] xPts = new float[globalN];
-                float[] yPts = new float[globalN];
+                xPts = new float[globalN];
+                yPts = new float[globalN];
 
                 // Converting list items to array
                 for (int i = 0; i < globalN; i++)
@@ -150,32 +179,15 @@ namespace NewtonInterpolation
                     yPts[i] = float.Parse(tboxY[i].Text);
                 }
 
-                // Generate label for y coordinate
-                Label lbl_InterpolPtsY = new Label();
-                lbl_InterpolPtsY.Text = "y";
-                lbl_InterpolPtsY.Location = new Point(215, globalLocY + 150);
-                lbl_InterpolPtsY.AutoSize = true;
-                lbl_InterpolPtsY.Font = new Font("Malgun Gothic", 12);
-                panel2.Controls.Add(lbl_InterpolPtsY);
-
-                // Generate textbox for y coordinate
-                TextBox txt_yCoord = new TextBox();
-                txt_yCoord.Name = "txt_yCoord";
-                txt_yCoord.Location = new Point(175, globalLocY + 200);
-                txt_yCoord.Font = new Font("Malgun Gothic", 12);
-                txt_yCoord.BackColor = Color.LightGreen;
-                txt_yCoord.TextAlign = HorizontalAlignment.Center;
-                txt_yCoord.ReadOnly = true;
-                txt_yCoord.Enabled = false;
-                panel2.Controls.Add(txt_yCoord);
-
                 float yValue = Newton.NewtonInterpolate(xPts, yPts, xCoord);
-                MessageBox.Show(yValue.ToString());
-        }
+
+                string title = "Interpolated y Coordinate";
+                MessageBox.Show(yValue.ToString(), title);
+            }
             catch
             {
                 MessageBox.Show("Please fill all fields.");
             }
-}
+        }
     }
 }
