@@ -117,7 +117,7 @@ namespace NewtonInterpolation
                 btn_Clear.Width = 100;
                 btn_Clear.Location = new Point(175, locY + 140);
                 btn_Clear.Font = new Font("Malgun Gothic", 12, FontStyle.Bold);
-                btn_Clear.BackColor = Color.LightGreen;
+                btn_Clear.BackColor = Color.AliceBlue;
                 btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
                 panel2.Controls.Add(btn_Clear);
 
@@ -176,7 +176,6 @@ namespace NewtonInterpolation
             panel2.Controls.Clear();
             panel2.Controls.Add(txt_SampleX);
             panel2.Controls.Add(txt_SampleY);
-
         }
 
         private void btn_Solve_Click(object sender, EventArgs e)
@@ -194,8 +193,10 @@ namespace NewtonInterpolation
                     yPts[i] = float.Parse(tboxY[i].Text);
                 }
 
+                // Computing Newton's interpolating polynomial
                 float yValue = Newton.NewtonInterpolate(xPts, yPts, xCoord);
 
+                // Display y coordinate output
                 string title = "Interpolated y Coordinate";
                 MessageBox.Show(yValue.ToString(), title);
             }
