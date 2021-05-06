@@ -13,9 +13,12 @@ namespace NewtonInterpolation
 {
     public partial class Form1 : Form
     {
+
         private List<TextBox> tboxX = new List<TextBox> { };
         private List<TextBox> tboxY = new List<TextBox> { };
 
+        private int globalN, globalLocY;
+        private TextBox tbox_xcoord;
 
         public Form1()
         {
@@ -89,6 +92,7 @@ namespace NewtonInterpolation
                 txt_xCoord.Location = new Point(175, locY + 60);
                 txt_xCoord.Font = new Font("Malgun Gothic", 12);
                 txt_xCoord.TextAlign = HorizontalAlignment.Center;
+                tbox_xcoord = txt_xCoord;
                 panel2.Controls.Add(txt_xCoord);
 
                 // Generate solve button
@@ -100,7 +104,11 @@ namespace NewtonInterpolation
                 btn_Solve.Location = new Point(175, locY + 100);
                 btn_Solve.Font = new Font("Malgun Gothic", 12, FontStyle.Bold);
                 btn_Solve.BackColor = Color.LightGreen;
+                btn_Solve.Click += new System.EventHandler(this.btn_Solve_Click);
                 panel2.Controls.Add(btn_Solve);
+
+                globalLocY = locY;
+                globalN = points;
 
             }
             catch (Exception)
@@ -127,15 +135,16 @@ namespace NewtonInterpolation
             func(Controls);
         }
 
-        private void btn_Solve_Click(object sender, EventArgs e, int points, float xCoord, int locY)
+        private void btn_Solve_Click(object sender, EventArgs e)
         {
             try
             {
-                float[] xPts = new float[points];
-                float[] yPts = new float[points];
+                float xCoord = float.Parse(tbox_xcoord.Text);
+                float[] xPts = new float[globalN];
+                float[] yPts = new float[globalN];
 
                 // Converting list items to array
-                for (int i = 0; i < points; i++)
+                for (int i = 0; i < globalN; i++)
                 {
                     xPts[i] = float.Parse(tboxX[i].Text);
                     yPts[i] = float.Parse(tboxY[i].Text);
@@ -144,7 +153,7 @@ namespace NewtonInterpolation
                 // Generate label for y coordinate
                 Label lbl_InterpolPtsY = new Label();
                 lbl_InterpolPtsY.Text = "y";
-                lbl_InterpolPtsY.Location = new Point(215, locY + 150);
+                lbl_InterpolPtsY.Location = new Point(215, globalLocY + 150);
                 lbl_InterpolPtsY.AutoSize = true;
                 lbl_InterpolPtsY.Font = new Font("Malgun Gothic", 12);
                 panel2.Controls.Add(lbl_InterpolPtsY);
@@ -152,7 +161,7 @@ namespace NewtonInterpolation
                 // Generate textbox for y coordinate
                 TextBox txt_yCoord = new TextBox();
                 txt_yCoord.Name = "txt_yCoord";
-                txt_yCoord.Location = new Point(175, locY + 200);
+                txt_yCoord.Location = new Point(175, globalLocY + 200);
                 txt_yCoord.Font = new Font("Malgun Gothic", 12);
                 txt_yCoord.BackColor = Color.LightGreen;
                 txt_yCoord.TextAlign = HorizontalAlignment.Center;
@@ -161,7 +170,7 @@ namespace NewtonInterpolation
                 panel2.Controls.Add(txt_yCoord);
 
                 float yValue = Newton.NewtonInterpolate(xPts, yPts, xCoord);
-                txt_yCoord.Text = yValue.ToString();
+                MessageBox.Show(yValue.ToString());
         }
             catch
             {
