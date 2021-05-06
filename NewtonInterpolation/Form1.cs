@@ -13,6 +13,9 @@ namespace NewtonInterpolation
 {
     public partial class Form1 : Form
     {
+
+        private List<TextBox> tboxX = new List<TextBox> { };
+        private List<TextBox> tboxY = new List<TextBox> { };
         public Form1()
         {
             InitializeComponent();
@@ -28,16 +31,16 @@ namespace NewtonInterpolation
             //try
             //{
 
-                int points = int.Parse(txtPoints.Text);
+            int points = int.Parse(txtPoints.Text);
 
-                int pointAX = 109;
-                int pointAY = 5;
+            int pointAX = 109;
+            int pointAY = 5;
 
-                int pointBX = 239;
-                int pointBY = 5;
+            int pointBX = 239;
+            int pointBY = 5;
 
-                int locX = 180;
-                int locY = 0;
+            int locX = 180;
+            int locY = 0;
             /*
                 TextBox[] xPts = new TextBox[points];
 
@@ -81,95 +84,97 @@ namespace NewtonInterpolation
                     i++;
                 }
             */
-                panel2.Controls.Clear();
-                panel3.Controls.Clear();
+            panel2.Controls.Clear();
+            panel3.Controls.Clear();
 
-                for (int i = 0; i < points; i++)
-                {
-                    TextBox x = new TextBox();
-                    
-                    x.Name = "txt_xPt" + (i + 1).ToString();
-                    x.Font = new Font("Malgun Gothic", 12);
-                    x.TextAlign = HorizontalAlignment.Center;
-                    panel2.Controls.Add(x);
-                    panel2.Show();
-                    pointAY += 35;
+            for (int i = 0; i < points; i++)
+            {
+                TextBox x = new TextBox();
 
-            // xPoints.Add(float.Parse(panel2.Controls["txt_xPt" + (i + 1).ToString()].Text));
+                x.Name = "txt_xPt" + (i + 1).ToString();
+                x.Font = new Font("Malgun Gothic", 12);
+                x.TextAlign = HorizontalAlignment.Center;
+                panel2.Controls.Add(x);
+                panel2.Show();
+                tboxX.Add(x);
+                pointAY += 35;
 
-            // xPoints.Add(float.Parse((TextBox)panel2.Controls["txt_xPt" + (i + 1).ToString()]).Text);
+                // xPoints.Add(float.Parse(panel2.Controls["txt_xPt" + (i + 1).ToString()].Text));
 
-            //    TextBox tbx = this.Controls.Find("txt_xPt" + (i + 1).ToString(), true).FirstOrDefault() as TextBox;
-            //    string xPt = tbx.Text;
-            //    xPoints.Add(float.Parse(xPt));
+                // xPoints.Add(float.Parse((TextBox)panel2.Controls["txt_xPt" + (i + 1).ToString()]).Text);
 
-                    TextBox y = new TextBox();
-                    y.Location = new Point(pointBX, pointBY);
-                    x.Name = "txt_yPt" + (i + 1).ToString();
-                    y.Font = new Font("Malgun Gothic", 12);
-                    y.TextAlign = HorizontalAlignment.Center;
-                    panel2.Controls.Add(y);
-                    panel2.Show();
-                    pointBY += 35;
-                    locY = pointBY;
-                }
-                // yPoints.Add(float.Parse(panel2.Controls["txt_yPt" + (i + 1).ToString()].Text));
-                
+                //    TextBox tbx = this.Controls.Find("txt_xPt" + (i + 1).ToString(), true).FirstOrDefault() as TextBox;
+                //    string xPt = tbx.Text;
+                //    xPoints.Add(float.Parse(xPt));
 
-                // Solve Button
-                Button btn_Solve = new Button();
-                btn_Solve.Name = "btn_Solve";
-                btn_Solve.Text = "SOLVE";
-                btn_Solve.Height = 30;
-                btn_Solve.Width = 100;
-                btn_Solve.Location = new Point(locX, locY);
-                btn_Solve.Font = new Font("Malgun Gothic", 12, FontStyle.Bold);
-                btn_Solve.BackColor = Color.LightGreen;
-                panel2.Controls.Add(btn_Solve);
+                TextBox y = new TextBox();
+                y.Location = new Point(pointBX, pointBY);
+                x.Name = "txt_yPt" + (i + 1).ToString();
+                y.Font = new Font("Malgun Gothic", 12);
+                y.TextAlign = HorizontalAlignment.Center;
+                panel2.Controls.Add(y);
+                panel2.Show();
+                tboxY.Add(y);
+                pointBY += 35;
+                locY = pointBY;
+            }
+            // yPoints.Add(float.Parse(panel2.Controls["txt_yPt" + (i + 1).ToString()].Text));
 
-                // Generate Label for Interpolating Points
-                Label lbl_InterpolPts = new Label();
-                lbl_InterpolPts.Text = "Interpolating Points:";
-                lbl_InterpolPts.Location = new Point(150, locY + 40);
-                lbl_InterpolPts.AutoSize = true;
-                lbl_InterpolPts.Font = new Font("Malgun Gothic", 12);
-                panel2.Controls.Add(lbl_InterpolPts);
 
-                Label lbl_InterpolPtsX = new Label();
-                lbl_InterpolPtsX.Text = "x";
-                lbl_InterpolPtsX.Location = new Point(150, locY + 60);
-                lbl_InterpolPtsX.AutoSize = true;
-                lbl_InterpolPtsX.Font = new Font("Malgun Gothic", 12);
-                panel2.Controls.Add(lbl_InterpolPtsX);
+            // Solve Button
+            Button btn_Solve = new Button();
+            btn_Solve.Name = "btn_Solve";
+            btn_Solve.Text = "SOLVE";
+            btn_Solve.Height = 30;
+            btn_Solve.Width = 100;
+            btn_Solve.Location = new Point(locX, locY);
+            btn_Solve.Font = new Font("Malgun Gothic", 12, FontStyle.Bold);
+            btn_Solve.BackColor = Color.LightGreen;
+            panel2.Controls.Add(btn_Solve);
 
-                Label lbl_InterpolPtsY = new Label();
-                lbl_InterpolPtsY.Text = "y";
-                lbl_InterpolPtsY.Location = new Point(280, locY + 60);
-                lbl_InterpolPtsY.AutoSize = true;
-                lbl_InterpolPtsY.Font = new Font("Malgun Gothic", 12);
-                panel2.Controls.Add(lbl_InterpolPtsY);
+            // Generate Label for Interpolating Points
+            Label lbl_InterpolPts = new Label();
+            lbl_InterpolPts.Text = "Interpolating Points:";
+            lbl_InterpolPts.Location = new Point(150, locY + 40);
+            lbl_InterpolPts.AutoSize = true;
+            lbl_InterpolPts.Font = new Font("Malgun Gothic", 12);
+            panel2.Controls.Add(lbl_InterpolPts);
 
-                // Generate TextBox for x coordinate
-                TextBox txt_xCoord = new TextBox();
-                txt_xCoord.Name = "txt_xCoord";
-                txt_xCoord.Location = new Point(pointAX, pointAY + 90);
-                txt_xCoord.Font = new Font("Malgun Gothic", 12);
-                txt_xCoord.TextAlign = HorizontalAlignment.Center;
-                panel2.Controls.Add(txt_xCoord);
+            Label lbl_InterpolPtsX = new Label();
+            lbl_InterpolPtsX.Text = "x";
+            lbl_InterpolPtsX.Location = new Point(150, locY + 60);
+            lbl_InterpolPtsX.AutoSize = true;
+            lbl_InterpolPtsX.Font = new Font("Malgun Gothic", 12);
+            panel2.Controls.Add(lbl_InterpolPtsX);
 
-                // Generate TextBox for y coordinate
-                TextBox txt_yCoord = new TextBox();
-                txt_yCoord.Name = "txt_yCoord";
-                txt_yCoord.Location = new Point(pointBX, pointBY + 90);
-                txt_yCoord.Font = new Font("Malgun Gothic", 12);
-                txt_yCoord.BackColor = Color.LightGreen;
-                txt_yCoord.TextAlign = HorizontalAlignment.Center;
-                txt_yCoord.ReadOnly = true;
-                txt_yCoord.Enabled = false;
-                panel2.Controls.Add(txt_yCoord);
+            Label lbl_InterpolPtsY = new Label();
+            lbl_InterpolPtsY.Text = "y";
+            lbl_InterpolPtsY.Location = new Point(280, locY + 60);
+            lbl_InterpolPtsY.AutoSize = true;
+            lbl_InterpolPtsY.Font = new Font("Malgun Gothic", 12);
+            panel2.Controls.Add(lbl_InterpolPtsY);
 
-                float xCoord = float.Parse(txt_xCoord.Text);
-                string yCoord = txt_yCoord.Text;
+            // Generate TextBox for x coordinate
+            TextBox txt_xCoord = new TextBox();
+            txt_xCoord.Name = "txt_xCoord";
+            txt_xCoord.Location = new Point(pointAX, pointAY + 90);
+            txt_xCoord.Font = new Font("Malgun Gothic", 12);
+            txt_xCoord.TextAlign = HorizontalAlignment.Center;
+            panel2.Controls.Add(txt_xCoord);
+
+            // Generate TextBox for y coordinate
+            TextBox txt_yCoord = new TextBox();
+            txt_yCoord.Name = "txt_yCoord";
+            txt_yCoord.Location = new Point(pointBX, pointBY + 90);
+            txt_yCoord.Font = new Font("Malgun Gothic", 12);
+            txt_yCoord.BackColor = Color.LightGreen;
+            txt_yCoord.TextAlign = HorizontalAlignment.Center;
+            txt_yCoord.ReadOnly = true;
+            txt_yCoord.Enabled = false;
+            panel2.Controls.Add(txt_yCoord);
+
+            //float xCoord = float.Parse(txt_xCoord.Text);
+            //string yCoord = txt_yCoord.Text;
 
 
             // }
@@ -238,16 +243,13 @@ namespace NewtonInterpolation
                 float[] xPts = new float[points];
                 float[] yPts = new float[points];
 
-                for (int i = 0; i > points; i++) 
+
+                for (int i = 0; i > points; i++)
                 {
-                    float value;
-                    string txtbox = "txt_xPt" + (i + 1).ToString();
-                    if (float.TryParse("txt_xPt" + (i + 1).ToString().Text, out value))
-                        xPts[i] = value;
+                    xPts[i] = float.Parse(tboxX[i].Text);
+                    yPts[i] = float.Parse(tboxY[i].Text);
                 }
 
-                int n = Int32.Parse(txtPoints.Text);
-                Newton newton = new Newton();
                 float y = Newton.NewtonInterpolate(xPts, yPts, xCoord);
             }
             catch
