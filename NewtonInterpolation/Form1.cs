@@ -39,6 +39,12 @@ namespace NewtonInterpolation
             {
                 int points = int.Parse(txtPoints.Text);
 
+                if (points<2)
+                {
+                    MessageBox.Show("Points should be more than 2.");
+                    return;
+                }
+
                 int pointAX = 109;
                 int pointAY = 5;
 
@@ -170,7 +176,7 @@ namespace NewtonInterpolation
             }
             catch
             {
-                MessageBox.Show("Please fill all fields.");
+                
             }
 
             panel2.Controls.Clear();
