@@ -154,6 +154,15 @@ namespace NewtonInterpolation
             tboxX.Clear();
             tboxY.Clear();
 
+            //if (xPts != null || xPts.Length == 0)
+            //{
+            //    Array.Clear(xPts, 0, xPts.Length);
+            //}
+            //else if (yPts != null || yPts.Length == 0)
+            //{
+            //    Array.Clear(yPts, 0, yPts.Length);
+            //}
+
             try
             {
                 Array.Clear(xPts, 0, xPts.Length);
@@ -161,7 +170,7 @@ namespace NewtonInterpolation
             }
             catch
             {
-
+                MessageBox.Show("Please fill all fields.");
             }
 
             panel2.Controls.Clear();
