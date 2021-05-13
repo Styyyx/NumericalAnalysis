@@ -16,5 +16,11 @@ namespace Compile
         {
             InitializeComponent();
         }
+
+        private void btnIntegration_Click(object sender, EventArgs e)
+        {
+            new FormIntegration().Show();
+            this.Hide();
+        }
     }
 }
