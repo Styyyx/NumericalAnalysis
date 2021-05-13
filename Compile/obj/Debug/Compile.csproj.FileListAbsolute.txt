@@ -23,3 +23,16 @@ D:\Users\reann\Google Drive\CS201\BSCS201 2ND SEM\NUMERICAL ANALYSIS\MP2\Numeric
 D:\Users\reann\Google Drive\CS201\BSCS201 2ND SEM\NUMERICAL ANALYSIS\MP2\NumericalAnalysis\Compile\bin\Debug\NumAnal_TaylorSeries.exe
 D:\Users\reann\Google Drive\CS201\BSCS201 2ND SEM\NUMERICAL ANALYSIS\MP2\NumericalAnalysis\Compile\bin\Debug\NumAnal_TaylorSeries.pdb
 D:\Users\reann\Google Drive\CS201\BSCS201 2ND SEM\NUMERICAL ANALYSIS\MP2\NumericalAnalysis\Compile\bin\Debug\NumAnal_TaylorSeries.exe.config
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\bin\Debug\Compile.exe.config
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\bin\Debug\Compile.exe
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\bin\Debug\Compile.pdb
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.csprojAssemblyReference.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.FormMain.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.Properties.Resources.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.csproj.GenerateResource.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.exe
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.pdb
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\bin\Debug\MathParser.org-mXparser.dll
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.FormIntegration.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.csproj.CopyComplete
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.FormSecant.resources

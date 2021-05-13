@@ -41,5 +41,11 @@ namespace Compile
                 Process.Start("TaylorSeries");
             }
         }
+
+        private void btnSecant_Click(object sender, EventArgs e)
+        {
+            new FormSecant().Show();
+            this.Hide();
+        }
     }
 }
