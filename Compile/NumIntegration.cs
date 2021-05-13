@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using org.mariuszgromada.math.mxparser;
-//using System.Runtime.InteropServices;
 
 namespace Compile
 {
@@ -21,7 +20,6 @@ namespace Compile
 
         private void btnSolve_Click(object sender, EventArgs e)
         {
-            //AllocConsole();
             try
             {
                 double a, b, n;
@@ -52,8 +50,6 @@ namespace Compile
                 double Sn = SimpsonRule(fx, a, b, (int)n);
                 double Sn2 = SimpsonRule(fx, a, b, (int)n + 2);
                 double SRelErr = Math.Abs((Sn2 - Sn) / Sn) * 100;
-
-                //MessageBox.Show(fx.getErrorMessage());
 
                 labTResult.Text = $"Trapezoid Result = {Math.Round(Tn, 4)}";
                 labTError.Text = $"Relative Error = {Math.Round(TRelErr, 4)}%";

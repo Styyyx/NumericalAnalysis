@@ -38,17 +38,17 @@
             // labTitle
             // 
             this.labTitle.AutoSize = true;
-            this.labTitle.Font = new System.Drawing.Font("Proxima Nova Rg", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTitle.Location = new System.Drawing.Point(75, 50);
             this.labTitle.Name = "labTitle";
-            this.labTitle.Size = new System.Drawing.Size(343, 52);
+            this.labTitle.Size = new System.Drawing.Size(366, 50);
             this.labTitle.TabIndex = 0;
             this.labTitle.Text = "NUMERICAL ANAYLSIS\r\nMACHINE PROBLEM COMPILATION\r\n";
             this.labTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnTaylor
             // 
-            this.btnTaylor.Font = new System.Drawing.Font("Proxima Nova Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaylor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaylor.Location = new System.Drawing.Point(101, 152);
             this.btnTaylor.Name = "btnTaylor";
             this.btnTaylor.Size = new System.Drawing.Size(279, 52);
@@ -59,7 +59,7 @@
             // 
             // btnSecant
             // 
-            this.btnSecant.Font = new System.Drawing.Font("Proxima Nova Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSecant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSecant.Location = new System.Drawing.Point(101, 219);
             this.btnSecant.Name = "btnSecant";
             this.btnSecant.Size = new System.Drawing.Size(279, 52);
@@ -70,7 +70,7 @@
             // 
             // btnInterpolation
             // 
-            this.btnInterpolation.Font = new System.Drawing.Font("Proxima Nova Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInterpolation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInterpolation.Location = new System.Drawing.Point(101, 287);
             this.btnInterpolation.Name = "btnInterpolation";
             this.btnInterpolation.Size = new System.Drawing.Size(279, 52);
@@ -80,13 +80,14 @@
             // 
             // btnIntegration
             // 
-            this.btnIntegration.Font = new System.Drawing.Font("Proxima Nova Rg", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIntegration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIntegration.Location = new System.Drawing.Point(101, 354);
             this.btnIntegration.Name = "btnIntegration";
             this.btnIntegration.Size = new System.Drawing.Size(279, 52);
             this.btnIntegration.TabIndex = 4;
             this.btnIntegration.Text = "Numerical Integration";
             this.btnIntegration.UseVisualStyleBackColor = true;
+            this.btnIntegration.Click += new System.EventHandler(this.btnIntegration_Click);
             // 
             // FormMain
             // 

@@ -32,7 +32,9 @@ C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAna
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.csproj.GenerateResource.cache
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.exe
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.pdb
-C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\bin\Debug\MathParser.org-mXparser.dll
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.FormIntegration.resources
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.csproj.CopyComplete
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.FormSecant.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.csproj.Fody.CopyLocal.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.FormTaylor.resources
