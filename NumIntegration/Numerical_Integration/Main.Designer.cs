@@ -228,6 +228,7 @@
             this.Controls.Add(this.tboxFx);
             this.Controls.Add(this.labFx);
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Numerical Integration";
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownN)).EndInit();
             this.ResumeLayout(false);
