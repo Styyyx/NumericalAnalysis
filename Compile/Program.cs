@@ -11,12 +11,16 @@ namespace Compile
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+
+        static public FormMain formMain;
+        
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+            formMain = new FormMain();
+            Application.Run(formMain);
         }
     }
 }
