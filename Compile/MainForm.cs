@@ -54,5 +54,11 @@ namespace Compile
             new FormIntegration().Show();
             this.Hide();
         }
+
+        private void btnInterpolation_Click(object sender, EventArgs e)
+        {
+            new FormNewton().Show();
+            this.Hide();
+        }
     }
 }

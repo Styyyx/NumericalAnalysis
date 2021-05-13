@@ -77,6 +77,7 @@
             this.btnInterpolation.TabIndex = 3;
             this.btnInterpolation.Text = "Newton Interpolation";
             this.btnInterpolation.UseVisualStyleBackColor = true;
+            this.btnInterpolation.Click += new System.EventHandler(this.btnInterpolation_Click);
             // 
             // btnIntegration
             // 

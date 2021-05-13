@@ -186,9 +186,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LeftArrowButton.cs">
-      <SubType>Component</SubType>
+    <Compile Include="NewtonInterpolation.cs">
+      <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NewtonInterpolation.Designer.cs">
+      <DependentUpon>NewtonInterpolation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newton.cs" />
     <Compile Include="NumIntegration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +216,9 @@
     <Compile Include="TaylorSeries.cs">
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="NewtonInterpolation.resx">
+      <DependentUpon>NewtonInterpolation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NumIntegration.resx">
       <DependentUpon>NumIntegration.cs</DependentUpon>
     </EmbeddedResource>
