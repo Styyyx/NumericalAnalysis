@@ -14,3 +14,4 @@ C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAna
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.csproj.CopyComplete
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.exe
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.pdb
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.FormSecantResult.resources

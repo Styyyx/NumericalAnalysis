@@ -41,7 +41,7 @@ namespace Compile
                     throw new MissingInputException();
                 }
 
-                Function fx = new Function($"f(x) = {tboxFx.Text}");
+                Function fx = new Function($"f(x) = {PreParser.PreParse(tboxFx.Text)}");
                 double x0, x1;
                 bool isMaxIter;
                 int maxIter = 1;
@@ -74,6 +74,8 @@ namespace Compile
                 }
 
                 Secant(1, x0, x1, fx, isMaxIter, maxIter, maxErr);
+
+                new FormSecantResult(secantResult).ShowDialog();
 
             }
             catch (MissingInputException)

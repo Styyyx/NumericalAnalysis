@@ -39,3 +39,4 @@ C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAna
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.csproj.Fody.CopyLocal.cache
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.FormTaylor.resources
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.FormNewton.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.FormSecantResult.resources

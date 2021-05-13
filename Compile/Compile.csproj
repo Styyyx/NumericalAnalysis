@@ -205,6 +205,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PreParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Secant.cs">
@@ -212,6 +213,12 @@
     </Compile>
     <Compile Include="Secant.Designer.cs">
       <DependentUpon>Secant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecantResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecantResult.Designer.cs">
+      <DependentUpon>SecantResult.cs</DependentUpon>
     </Compile>
     <Compile Include="TaylorSeries.cs">
       <SubType>Form</SubType>
@@ -236,6 +243,9 @@
     </Compile>
     <EmbeddedResource Include="Secant.resx">
       <DependentUpon>Secant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecantResult.resx">
+      <DependentUpon>SecantResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TaylorSeries.resx">
       <DependentUpon>TaylorSeries.cs</DependentUpon>
