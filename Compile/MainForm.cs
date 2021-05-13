@@ -7,19 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NumAnal_TaylorSeries;
+using System.Diagnostics;
+using System.ServiceProcess;
 
 namespace Compile
 {
     public partial class FormMain : Form
     {
+
         public FormMain()
         {
             InitializeComponent();
         }
 
+        private NumAnal_TaylorSeries.TaylorSeries TaylorSeries;
+
+        private bool IsActivatedWithShow = true;
+
         private void FormMain_Load(object sender, EventArgs e)
         {
+            TaylorSeries = new TaylorSeries();
+        }
 
+        private void btnTaylor_Click(object sender, EventArgs e)
+        {
+            if (IsActivatedWithShow)
+            {
+                TaylorSeries.Show();
+            }
+            else
+            {
+                Process.Start("TaylorSeries");
+            }
         }
     }
 }
