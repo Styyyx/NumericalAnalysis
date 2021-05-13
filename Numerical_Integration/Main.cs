@@ -8,16 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using org.mariuszgromada.math.mxparser;
-//using System.Runtime.InteropServices;
 
 namespace Numerical_Integration
 {
     public partial class Main : Form
     {
-
-        //[DllImport("kernel32.dll", SetLastError = true)]
-        //[return: MarshalAs(UnmanagedType.Bool)]
-        //static extern bool AllocConsole();
 
         public Main()
         {
@@ -26,7 +21,6 @@ namespace Numerical_Integration
 
         private void btnSolve_Click(object sender, EventArgs e)
         {
-            //AllocConsole();
             try
             {
                 double a, b, n;
