@@ -65,6 +65,7 @@
             this.btnSecant.TabIndex = 2;
             this.btnSecant.Text = "Secant Method";
             this.btnSecant.UseVisualStyleBackColor = true;
+            this.btnSecant.Click += new System.EventHandler(this.btnSecant_Click);
             // 
             // btnInterpolation
             // 

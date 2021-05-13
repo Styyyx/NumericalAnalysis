@@ -19,3 +19,4 @@ C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAna
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\bin\Debug\MathParser.org-mXparser.dll
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.FormIntegration.resources
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.csproj.CopyComplete
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Debug\Compile.FormSecant.resources

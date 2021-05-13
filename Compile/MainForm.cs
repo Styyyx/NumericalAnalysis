@@ -22,5 +22,11 @@ namespace Compile
             new FormIntegration().Show();
             this.Hide();
         }
+
+        private void btnSecant_Click(object sender, EventArgs e)
+        {
+            new FormSecant().Show();
+            this.Hide();
+        }
     }
 }

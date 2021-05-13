@@ -76,7 +76,7 @@ namespace Compile
             }
             catch (MissingInputException)
             {
-                MessageBox.Show("Missing Input.");
+                MessageBox.Show("At least one text field is missing an input.");
             }
         }
 
@@ -185,13 +185,13 @@ namespace Compile
 
         private void FormIntegration_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Program.formMain.Show();
+            this.Dispose();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Program.formMain.Show();
-            this.Hide();
+            this.Close();
         }
     }
 
