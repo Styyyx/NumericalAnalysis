@@ -36,7 +36,7 @@ namespace Numerical_Integration
                     throw new MissingInputException();
                 }
 
-                Function fx = new Function($"f(x) = {tboxFx.Text}");
+                Function fx = new Function($"f(x) = {PreParser.PreParse(tboxFx.Text)}");
 
                 
                 if (!double.TryParse(tboxA.Text, out a))
