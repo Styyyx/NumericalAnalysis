@@ -1,0 +1,12 @@
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\bin\Release\Numerical_Integration.exe.config
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\bin\Release\Numerical_Integration.exe
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\bin\Release\Numerical_Integration.pdb
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\bin\Release\System.Diagnostics.DiagnosticSource.xml
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\obj\Release\Numerical_Integration.csprojAssemblyReference.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\obj\Release\Numerical_Integration.Main.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\obj\Release\Numerical_Integration.Properties.Resources.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\obj\Release\Numerical_Integration.csproj.GenerateResource.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\obj\Release\Numerical_Integration.csproj.Fody.CopyLocal.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\obj\Release\Numerical_Integration.csproj.CopyComplete
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\obj\Release\Numerical_Integration.exe
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\obj\Release\Numerical_Integration.pdb
