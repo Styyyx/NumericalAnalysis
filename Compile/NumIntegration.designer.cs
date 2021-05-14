@@ -51,7 +51,7 @@
             // 
             this.labFx.AutoSize = true;
             this.labFx.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFx.Location = new System.Drawing.Point(49, 106);
+            this.labFx.Location = new System.Drawing.Point(49, 113);
             this.labFx.Name = "labFx";
             this.labFx.Size = new System.Drawing.Size(96, 18);
             this.labFx.TabIndex = 0;
@@ -80,7 +80,7 @@
             // 
             this.labA.AutoSize = true;
             this.labA.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labA.Location = new System.Drawing.Point(49, 151);
+            this.labA.Location = new System.Drawing.Point(49, 158);
             this.labA.Name = "labA";
             this.labA.Size = new System.Drawing.Size(116, 18);
             this.labA.TabIndex = 3;
@@ -90,7 +90,7 @@
             // 
             this.labB.AutoSize = true;
             this.labB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labB.Location = new System.Drawing.Point(49, 196);
+            this.labB.Location = new System.Drawing.Point(49, 203);
             this.labB.Name = "labB";
             this.labB.Size = new System.Drawing.Size(116, 18);
             this.labB.TabIndex = 4;
@@ -108,7 +108,7 @@
             // tboxB
             // 
             this.tboxB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxB.Location = new System.Drawing.Point(182, 186);
+            this.tboxB.Location = new System.Drawing.Point(182, 193);
             this.tboxB.Multiline = true;
             this.tboxB.Name = "tboxB";
             this.tboxB.Size = new System.Drawing.Size(250, 28);
@@ -118,7 +118,7 @@
             // 
             this.labN.AutoSize = true;
             this.labN.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labN.Location = new System.Drawing.Point(49, 238);
+            this.labN.Location = new System.Drawing.Point(49, 244);
             this.labN.Name = "labN";
             this.labN.Size = new System.Drawing.Size(162, 18);
             this.labN.TabIndex = 7;
@@ -127,7 +127,7 @@
             // numUpDownN
             // 
             this.numUpDownN.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUpDownN.Location = new System.Drawing.Point(231, 236);
+            this.numUpDownN.Location = new System.Drawing.Point(231, 242);
             this.numUpDownN.Minimum = new decimal(new int[] {
             2,
             0,
