@@ -41,8 +41,13 @@
             // 
             // dgvResult
             // 
-            this.dgvResult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dgvResult.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvResult.AllowUserToAddRows = false;
+            this.dgvResult.AllowUserToDeleteRows = false;
+            this.dgvResult.AllowUserToResizeColumns = false;
+            this.dgvResult.AllowUserToResizeRows = false;
+            this.dgvResult.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvResult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvResult.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResult.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iteration,
@@ -52,9 +57,11 @@
             this.fx1,
             this.x2,
             this.err});
-            this.dgvResult.Location = new System.Drawing.Point(12, 12);
+            this.dgvResult.Location = new System.Drawing.Point(1, 0);
             this.dgvResult.Name = "dgvResult";
-            this.dgvResult.Size = new System.Drawing.Size(394, 56);
+            this.dgvResult.RowHeadersVisible = false;
+            this.dgvResult.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgvResult.Size = new System.Drawing.Size(416, 138);
             this.dgvResult.TabIndex = 1;
             // 
             // iteration
@@ -109,8 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(423, 79);
+            this.ClientSize = new System.Drawing.Size(442, 162);
             this.Controls.Add(this.dgvResult);
             this.Name = "FormSecantResult";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

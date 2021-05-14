@@ -76,6 +76,7 @@ namespace Compile
                 Secant(1, x0, x1, fx, isMaxIter, maxIter, maxErr);
 
                 new FormSecantResult(secantResult).ShowDialog();
+                secantResult.Clear();
 
             }
             catch (MissingInputException)
@@ -108,7 +109,14 @@ namespace Compile
             Secant(n + 1, x1, x2, fx, isMaxIter, maxIter, maxErr);
             return;
         }
-        
+
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            tboxFx.Text = "";
+            tboxX0.Text = "";
+            tboxX1.Text = "";
+            tboxStopForce.Text = "";
+        }
     }
 
     public class x0NotNumericException : Exception

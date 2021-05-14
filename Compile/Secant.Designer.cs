@@ -132,8 +132,7 @@
             this.rbtnIter.Location = new System.Drawing.Point(16, 14);
             this.rbtnIter.Name = "rbtnIter";
             this.rbtnIter.Size = new System.Drawing.Size(84, 21);
-            this.rbtnIter.TabIndex = 24;
-            this.rbtnIter.TabStop = true;
+            this.rbtnIter.TabIndex = 30;
             this.rbtnIter.Text = "Iterations";
             this.rbtnIter.UseVisualStyleBackColor = true;
             // 
@@ -154,7 +153,7 @@
             this.rbtnErr.Location = new System.Drawing.Point(16, 41);
             this.rbtnErr.Name = "rbtnErr";
             this.rbtnErr.Size = new System.Drawing.Size(58, 21);
-            this.rbtnErr.TabIndex = 26;
+            this.rbtnErr.TabIndex = 31;
             this.rbtnErr.Text = "Error";
             this.rbtnErr.UseVisualStyleBackColor = true;
             // 
@@ -187,6 +186,7 @@
             this.btnClearAll.TabIndex = 29;
             this.btnClearAll.Text = "Clear All";
             this.btnClearAll.UseVisualStyleBackColor = true;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
             // 
             // tboxStopForce
             // 
@@ -195,7 +195,7 @@
             this.tboxStopForce.Multiline = true;
             this.tboxStopForce.Name = "tboxStopForce";
             this.tboxStopForce.Size = new System.Drawing.Size(103, 30);
-            this.tboxStopForce.TabIndex = 30;
+            this.tboxStopForce.TabIndex = 24;
             // 
             // FormSecant
             // 
@@ -215,6 +215,10 @@
             this.Controls.Add(this.labFx);
             this.Controls.Add(this.labTitle);
             this.Controls.Add(this.btnBack);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormSecant";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Secant";

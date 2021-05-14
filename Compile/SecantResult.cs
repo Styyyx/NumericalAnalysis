@@ -27,6 +27,29 @@ namespace Compile
                 var (n, x0, x1, fx0, fx1, x2, err) = secantResult[i];
                 dgvResult.Rows.Add(n, x0, x1, fx0, fx1, x2, err);
             }
+
+
+            dgvResult.Height = dgvResult.ColumnHeadersHeight;
+            for (int i = 0; i < dgvResult.Rows.Count; i++)
+            {
+                dgvResult.Height += dgvResult.Rows[i].Height;
+            }
+
+            dgvResult.Width = 0;
+            for (int i = 0; i < dgvResult.Columns.Count; i++)
+            {
+                dgvResult.Width += dgvResult.Columns[i].Width;
+            }
+
+            //this.AutoSize = true;
+            this.Size = new Size(dgvResult.Width, dgvResult.Height);
+            this.Height += 70;
+            this.Width += 50;
+            this.MinimumSize = this.Size;
+            this.MaximumSize = this.Size;
+            dgvResult.Left = (this.ClientSize.Width - dgvResult.Width) / 2;
+            dgvResult.Top = (this.ClientSize.Height - dgvResult.Height) / 2;
+
         }
     }
 }
