@@ -8,17 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using org.mariuszgromada.math.mxparser;
-//using System.Runtime.InteropServices;
 
 namespace Numerical_Integration
 {
     public partial class Main : Form
     {
-
-        //[DllImport("kernel32.dll", SetLastError = true)]
-        //[return: MarshalAs(UnmanagedType.Bool)]
-        //static extern bool AllocConsole();
-
         public Main()
         {
             InitializeComponent();
@@ -26,7 +20,11 @@ namespace Numerical_Integration
 
         private void btnSolve_Click(object sender, EventArgs e)
         {
-            //AllocConsole();
+            labTResult.Visible = false;
+            labTError.Visible = false;
+            labSResult.Visible = false;
+            labSError.Visible = false;
+
             try
             {
                 double a, b, n;
@@ -50,26 +48,26 @@ namespace Numerical_Integration
 
                 n = Convert.ToDouble(numUpDownN.Value);
 
+                // Trapezoid
                 double Tn = TrapezoidRule(fx, a, b, (int)n);
                 double Tn1 = TrapezoidRule(fx, a, b, (int)n + 1);
                 double TRelErr = Math.Abs((Tn1 - Tn) / Tn) * 100;
-
-                double Sn = SimpsonRule(fx, a, b, (int)n);
-                double Sn2 = SimpsonRule(fx, a, b, (int)n + 2);
-                double SRelErr = Math.Abs((Sn2 - Sn) / Sn) * 100;
-
-                //MessageBox.Show(fx.getErrorMessage());
-
                 labTResult.Text = $"Trapezoid Result = {Math.Round(Tn, 4)}";
                 labTError.Text = $"Relative Error = {Math.Round(TRelErr, 4)}%";
-                labSResult.Text = $"Simpson Result = {Math.Round(Sn, 4)}";
-                labSError.Text = $"Relative Error = {Math.Round(SRelErr, 4)}%";
-
                 labTResult.Visible = true;
                 labTError.Visible = true;
-                labSResult.Visible = true;
-                labSError.Visible = true;
 
+                // Simpson
+                if (n % 2 == 0)
+                {
+                    double Sn = SimpsonRule(fx, a, b, (int)n);
+                    double Sn2 = SimpsonRule(fx, a, b, (int)n + 2);
+                    double SRelErr = Math.Abs((Sn2 - Sn) / Sn) * 100;
+                    labSResult.Text = $"Simpson Result = {Math.Round(Sn, 4)}";
+                    labSError.Text = $"Relative Error = {Math.Round(SRelErr, 4)}%";
+                    labSResult.Visible = true;
+                    labSError.Visible = true;
+                }
             }
             catch (LowerLimitNotNumericException)
             {
@@ -130,15 +128,11 @@ namespace Numerical_Integration
                 }
             }
 
-            //Console.WriteLine("\nTrapezoid Rule Values:");
             for (int i = 0; i < n+1; i++)
             {
-                //Console.WriteLine($"f({intervals[i]}) = {values[i]}");
                 sum += values[i];
             }
             double total = (deltaX / 2) * sum;
-
-            //Console.WriteLine($"\nT{n} = {total}");
 
             return total;
         }
@@ -174,7 +168,6 @@ namespace Numerical_Integration
                 }
             }
 
-            //Console.WriteLine("\nSimpson Rule Values:");
             for (int i = 0; i < n + 1; i++)
             {
                 Console.WriteLine($"f({intervals[i]}) = {values[i]}");
@@ -182,8 +175,6 @@ namespace Numerical_Integration
             }
 
             double total = (deltaX / 3) * sum;
-
-            //Console.WriteLine($"\nS{n} = {total}");
 
             return total;
         }
