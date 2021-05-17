@@ -188,8 +188,9 @@
             this.MaximumSize = new System.Drawing.Size(600, 650);
             this.Name = "FormNewton";
             this.Padding = new System.Windows.Forms.Padding(20);
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NDDP Calculator";
+            this.Text = "Numerical Analysis | MP - NDDP Calculator";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormNewton_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);

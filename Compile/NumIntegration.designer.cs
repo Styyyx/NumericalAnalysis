@@ -243,7 +243,7 @@
             this.Name = "FormIntegration";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Numerical Integration";
+            this.Text = "Numerical Analysis | MP - Numerical Integration";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormIntegration_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownN)).EndInit();
             this.ResumeLayout(false);

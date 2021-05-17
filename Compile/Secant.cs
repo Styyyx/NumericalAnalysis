@@ -117,11 +117,6 @@ namespace Compile
             tboxX1.Text = "";
             tboxStopForce.Text = "";
         }
-
-        private void btnBack_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 
     public class x0NotNumericException : Exception

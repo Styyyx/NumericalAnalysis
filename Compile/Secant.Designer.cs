@@ -196,7 +196,7 @@
             this.btnBack.TabIndex = 30;
             this.btnBack.Text = "BACK";
             this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // FormSecant
             // 
@@ -220,7 +220,7 @@
             this.Name = "FormSecant";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Secant";
+            this.Text = "Numerical Analysis | MP - Secant";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Secant_FormClosed);
             this.panelStopForce.ResumeLayout(false);
             this.panelStopForce.PerformLayout();
