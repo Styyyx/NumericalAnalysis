@@ -119,6 +119,7 @@
             this.ClientSize = new System.Drawing.Size(442, 162);
             this.Controls.Add(this.dgvResult);
             this.Name = "FormSecantResult";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Secant Result";
             this.Load += new System.EventHandler(this.FormSecantResult_Load);
