@@ -1,0 +1,17 @@
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\bin\Release\Compile.exe.config
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\bin\Release\Compile.exe
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\bin\Release\Compile.pdb
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\bin\Release\System.Diagnostics.DiagnosticSource.xml
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.csprojAssemblyReference.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.FormNewton.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.FormIntegration.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.FormMain.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.Properties.Resources.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.FormSecant.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.FormTaylor.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.csproj.GenerateResource.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.csproj.Fody.CopyLocal.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.csproj.CopyComplete
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.exe
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.pdb
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Compile\obj\Release\Compile.FormSecantResult.resources

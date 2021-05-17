@@ -113,6 +113,7 @@ namespace Numerical_Integration
                             }
                             tree.Add(curr);
 
+                            
                         }
                         else if (curr == "x" && tree.Count == 0)
                         {
