@@ -20,6 +20,10 @@ namespace Compile
 
         private void btnSolve_Click(object sender, EventArgs e)
         {
+            labTResult.Visible = false;
+            labTError.Visible = false;
+            labSResult.Visible = false;
+            labSError.Visible = false;
             try
             {
                 double a, b, n;
@@ -29,7 +33,7 @@ namespace Compile
                     throw new MissingInputException();
                 }
 
-                Function fx = new Function($"f(x) = {tboxFx.Text}");
+                Function fx = new Function($"f(x) = {PreParser.PreParse(tboxFx.Text)}");
 
                 
                 if (!double.TryParse(tboxA.Text, out a))
@@ -43,24 +47,26 @@ namespace Compile
 
                 n = Convert.ToDouble(numUpDownN.Value);
 
+                // Trapezoid
                 double Tn = TrapezoidRule(fx, a, b, (int)n);
                 double Tn1 = TrapezoidRule(fx, a, b, (int)n + 1);
                 double TRelErr = Math.Abs((Tn1 - Tn) / Tn) * 100;
-
-                double Sn = SimpsonRule(fx, a, b, (int)n);
-                double Sn2 = SimpsonRule(fx, a, b, (int)n + 2);
-                double SRelErr = Math.Abs((Sn2 - Sn) / Sn) * 100;
-
                 labTResult.Text = $"Trapezoid Result = {Math.Round(Tn, 4)}";
                 labTError.Text = $"Relative Error = {Math.Round(TRelErr, 4)}%";
-                labSResult.Text = $"Simpson Result = {Math.Round(Sn, 4)}";
-                labSError.Text = $"Relative Error = {Math.Round(SRelErr, 4)}%";
-
                 labTResult.Visible = true;
                 labTError.Visible = true;
-                labSResult.Visible = true;
-                labSError.Visible = true;
 
+                // Simpson
+                if (n%2==0)
+                {
+                    double Sn = SimpsonRule(fx, a, b, (int)n);
+                    double Sn2 = SimpsonRule(fx, a, b, (int)n + 2);
+                    double SRelErr = Math.Abs((Sn2 - Sn) / Sn) * 100;
+                    labSResult.Text = $"Simpson Result = {Math.Round(Sn, 4)}";
+                    labSError.Text = $"Relative Error = {Math.Round(SRelErr, 4)}%";
+                    labSResult.Visible = true;
+                    labSError.Visible = true;
+                }
             }
             catch (LowerLimitNotNumericException)
             {
