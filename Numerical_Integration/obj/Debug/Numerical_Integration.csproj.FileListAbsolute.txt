@@ -1,0 +1,17 @@
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NumIntegration\Numerical_Integration\bin\Debug\Numerical_Integration.exe.config
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NumIntegration\Numerical_Integration\bin\Debug\Numerical_Integration.exe
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NumIntegration\Numerical_Integration\bin\Debug\Numerical_Integration.pdb
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NumIntegration\Numerical_Integration\obj\Debug\Numerical_Integration.csprojAssemblyReference.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NumIntegration\Numerical_Integration\obj\Debug\Numerical_Integration.Main.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NumIntegration\Numerical_Integration\obj\Debug\Numerical_Integration.Properties.Resources.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NumIntegration\Numerical_Integration\obj\Debug\Numerical_Integration.csproj.GenerateResource.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NumIntegration\Numerical_Integration\obj\Debug\Numerical_Integration.exe
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NumIntegration\Numerical_Integration\obj\Debug\Numerical_Integration.pdb
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NumIntegration\Numerical_Integration\bin\Debug\MathParser.org-mXparser.dll
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\NumIntegration\Numerical_Integration\obj\Debug\Numerical_Integration.csproj.CopyComplete
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\obj\Debug\Numerical_Integration.csprojAssemblyReference.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\obj\Debug\Numerical_Integration.Main.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\obj\Debug\Numerical_Integration.Properties.Resources.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\obj\Debug\Numerical_Integration.csproj.GenerateResource.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\obj\Debug\Numerical_Integration.exe
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Numerical Analysis\NumericalAnalysis\Numerical_Integration\obj\Debug\Numerical_Integration.pdb
